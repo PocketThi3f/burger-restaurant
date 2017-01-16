@@ -4,11 +4,11 @@
 
 <ol>
 	{{#each burgers}}
-		{{#unless this.devoured}}
+		{{#unless devoured}}
 			<li>
-				{{this.burger_name}}
+				{{burger_name}}
 
-				<form action="/{{this.ID}}?_method=PUT" method="POST">
+				<form action="/{{ID}}?_method=PUT" method="POST">
 					<input type="hidden" name="devoured" value="true">
 					<button type="submit">Diggin In!</button>
 				</form>
@@ -23,11 +23,11 @@
 
 <ol>
 	{{#each burgers}}
-		{{#if this.devoured}}
+		{{#if devoured}}
 			<li>
-				{{this.burger_name}}
+				{{burger_name}}
 
-				<form action="/{{this.ID}}?_method=PUT" method="POST">
+				<form action="/{{ID}}?_method=PUT" method="POST">
 					<input type="hidden" name="devoured" value="false">
 					<button type="submit">Re-Order</button>
 				</form>
