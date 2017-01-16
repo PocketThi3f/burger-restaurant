@@ -1,6 +1,7 @@
 // Here is the O.R.M. where the functions are written to take inputs and conditions
 var connection = require("../config/connection.js");
 
+// function for when vals are placed into the SQL syntax
 function printQuestionMarks(num) {
 	var arr = [];
 
@@ -16,7 +17,7 @@ function objToSql(ob) {
 	var arr = [];
 
 	for(var key in ob) {
-		if(ob.hasProperty(key)) {
+		if(Object.hasOwnProperty(key)) {
 			arr.push(key + '=' + ob[key]);
 		}
 	}
@@ -28,7 +29,7 @@ var orm = {
 	// use the select method to display all burger contents
 	selectAll: function(tableInput, cb) {
 		var queryString = "SELECT * FROM " + tableInput + ';';
-		connection.query(queryString, function(err, result) {
+		connection.query(queryString, tableInput, function(err, result) {
 			if (err) {
 				throw err;
 			}
@@ -49,7 +50,7 @@ var orm = {
 
 		console.log(queryString);
 
-		connection.query(queryString, function(err, result) {
+		connection.query(queryString, vals, function(err, result) {
 			if (err) {
 				throw err;
 			}
@@ -57,7 +58,7 @@ var orm = {
 		});
 	},
 	// manually update a burger on user input
-	updateOne: function(table. objColVals, condition, cb) {
+	updateOne: function(table, objColVals, condition, cb) {
 		var queryString = "UPDATE " + table;
 
 		queryString += " SET ";

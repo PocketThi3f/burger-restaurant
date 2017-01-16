@@ -7,9 +7,9 @@ var exphbs = require("express-handlebars");
 var routes = require("./controllers/burgers_controller.js");
 
 var app = express();
-var PORT = 1337;
+var PORT = process.env.PORT || 1337;
 
-// Static content for the app from the "public directory" in the application directory
+// Static content for the app 
 app.use(express.static(process.cwd() + "/public"));
 
 app.use(bodyParser.urlencoded({
@@ -29,5 +29,5 @@ app.use("/", routes);
 
 
 app.listen(PORT, function() {
-  console.log("I am now listening to port: "+PORT);
+  console.log("I am now listening to port: " + PORT);
 });
