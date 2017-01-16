@@ -2,7 +2,7 @@
 var orm = require("../config/orm.js");
 
 var burger = {
-
+	// select the table to display all values within the mySQL database
 	selectAll: function(cb) {
 		orm.selectAll("burgers", function(res) {
 			cb(res);
@@ -14,6 +14,7 @@ var burger = {
 			cb(res);
 		});
 	},
+	// update the mySQL database with user input
 	updateOne: function(objColVals, condition, cb) {
 		orm.updateOne("burgers", objColVals, condition, function(res) {
 			cb(res);

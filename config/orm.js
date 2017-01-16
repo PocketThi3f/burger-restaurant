@@ -1,6 +1,16 @@
 // Here is the O.R.M. where the functions are written to take inputs and conditions
 var connection = require("../config/connection.js");
 
+function printQuestionMarks(num) {
+	var arr = [];
+
+	for(var i = 0; i < num; i++) {
+		arr.push("?");
+	}
+
+	return arr.toString();
+}
+
 function objToSql(ob) {
 	// column1=value, column2=value...
 	var arr = [];
@@ -18,7 +28,10 @@ var orm = {
 	selectAll: function(tableInput, cb) {
 		var queryString = "SELECT * FROM " + tableInput + ';';
 		connection.query(queryString, function(err, result) {
-
+			if (err) {
+				throw err;
+			}
+			cb(result);
 		});
 	},
 
@@ -32,5 +45,9 @@ var orm = {
 		queryString += ') ';
 		queryString += 'VALUES (';
 		queryString += 
+	},
+
+	updateOne: function() {
+		var queryString = "UPDATE SET WHERE "
 	}
 }
