@@ -1,0 +1,8 @@
+* {
+	box-sizing: border-box;
+}
+
+#readyOrders {
+	text-align: center;
+	font-size: 35px;
+}
