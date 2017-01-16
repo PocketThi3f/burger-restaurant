@@ -1,8 +1,7 @@
 // Here are all the functions that will route the app
 var express = require("express");
-var burger = require("../models/burger.js");
-
 var router = express.Router();
+var burger = require("../models/burger.js");
 
 router.get("/", function(req, res) {
 	res.redirect("/burgers");
@@ -27,7 +26,7 @@ router.put("/burgers/update/:ID", function(req, res) {
 
 	console.log("condition", condition);
 
-	cat.update({ burger_name: req.body.burger_name }, condition, function() {
+	burger.update({ devoured: req.body.devoured }, condition, function() {
 		res.redirect("/burgers");
 	});
 });
