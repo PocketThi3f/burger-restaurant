@@ -2,7 +2,19 @@
 	box-sizing: border-box;
 }
 
+body {
+	background-image: url("../assets/images/food.png");
+	background-repeat: no-repeat;
+}
+
 #readyOrders {
-	text-align: center;
+	text-align: left;
 	font-size: 35px;
 }
+
+.eaten {
+	text-align: left;
+	font-size: 25px;
+	margin-right: 10px;
+}
+

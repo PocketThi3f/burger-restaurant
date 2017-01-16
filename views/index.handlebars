@@ -1,8 +1,8 @@
-<h1>Here's what's on the Menu:</h1>
+<h1>Here's What's on the Menu:</h1>
 
 <div>
 	<h2 id="readyOrders">Order Up! Ready to Serve.</h2>
-
+	<img src="http://aht.seriouseats.com/images/2011/12/20111207-burger-gift-wrap.jpg"/>
 	<ol>
 		{{#each burgers}}
 			{{#unless devoured}}
@@ -12,16 +12,14 @@
 					<form action="/{{ID}}?_method=PUT" method="POST">
 						<input type="hidden" name="devoured" value="true">
 						<button type="submit">Diggin In!</button>
-					</form>
-
-				
+					</form>			
 				</li>
 			{{/unless}}	
 		{{/each}}
 	</ol>
 </div>
 
-<div>
+<div class="eaten">
 	<h2>Burgers Devoured So Far:</h2>
 
 	<ol>
@@ -40,7 +38,7 @@
 	</ol>
 </div>
 
-<div>
+<div class="eaten">
 	<h2>Order A New Burger</h2>
 
 	<form class="create-update-form" action="/" method="POST">
@@ -48,7 +46,7 @@
 
 		<div class="form-group">
 			<label for="menu">Let Me Know What To Cook For Yah Then Hit Submit!</label>
-			<input type="text" id="menu" name="burger_name">
+			<input type="text" id="menu" name="burger_name" width="100px" height="100px">
 		</div>
 
 		<button type="submit">Ready To Order</button>
