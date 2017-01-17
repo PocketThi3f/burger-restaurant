@@ -1,6 +1,7 @@
 <div class="container">
+
 	<h1 class="welcomeM">Welcome To Eat-Da-Burger Joint!</h1>
-	<div>
+	
 		<h2 class="askOrder">Order Up! Ready to Serve.</h2>
 
 		<img class="burgerImg" src="http://aht.seriouseats.com/images/2011/12/20111207-burger-gift-wrap.jpg"/>
@@ -19,9 +20,9 @@
 				{{/unless}}	
 			{{/each}}
 		</ol>
-	</div>
+	
 
-	<div class="eaten">
+	
 		<h2 class="askOrder">Burgers Devoured So Far:</h2>
 
 		<ol>
@@ -38,9 +39,9 @@
 				{{/if}}
 			{{/each}}	
 		</ol>
-	</div>
 
-	<div class="newOrder">
+
+	
 		<h2 class="askOrder">Order A New Burger</h2>
 
 		<form class="create-update-form" action="/" method="POST">
@@ -48,10 +49,9 @@
 
 			<div class="form-group">
 				<label for="menu" class="mealT">Let Me Know What To Cook For Yah Then Hit Submit!</label>
-				<input type="text" id="menu" name="burger_name" width="100px" height="100px">
+				<input type="text" id="menu" name="burger_name">
 			</div>
 
-			<button type="submit" class="btn-danger">Ready To Order</button>
+			<button type="submit" class="btn-danger mealT">Ready To Order</button>
 		</form>
-	</div>
 </div>	

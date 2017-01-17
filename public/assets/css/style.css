@@ -7,9 +7,9 @@ body {
 }
 
 .burgerImg {
-	width: 300px;
-	height: 300px;
-	margin: auto;
+	width: 250px;
+	height: 250px;
+	margin-left: 425px;
 }
 
 .welcomeM {
@@ -19,9 +19,11 @@ body {
 
 .askOrder {
 	font-family: 'VT323', monospace;
+	text-align: center;
 }
 
 .mealT {
 	font-family: 'Architects Daughter', cursive;
+	margin-left: 425px;
 }
 
