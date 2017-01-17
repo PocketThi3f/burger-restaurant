@@ -3,7 +3,7 @@ and the export made by the ORM */
 var mysql = require("mysql");
 
 var connection = mysql.createConnection({
-	port: 1337,
+	PORT: 1337,
 	host: "localhost",
 	user: "root",
 	password: "password",
