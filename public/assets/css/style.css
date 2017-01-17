@@ -1,10 +1,6 @@
 * {
 	box-sizing: border-box;
-}
-
-body {
 	background-image: url("../assets/images/food.png");
-	background-repeat: no-repeat;
 }
 
 #readyOrders {

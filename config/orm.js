@@ -17,7 +17,7 @@ function objToSql(ob) {
 	var arr = [];
 
 	for(var key in ob) {
-		if(Object.hasOwnProperty(key)) {
+		if(ob.hasOwnProperty(key)) {
 			arr.push(key + '=' + ob[key]);
 		}
 	}
@@ -67,6 +67,7 @@ var orm = {
 		queryString += condition;
 
 		console.log(queryString);
+		
 		connection.query(queryString, function(err, result) {
 			if (err) {
 				throw err;
