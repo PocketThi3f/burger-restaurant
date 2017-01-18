@@ -1,5 +1,5 @@
 // Here is the O.R.M. where the functions are written to take inputs and conditions
-var connection = require("../config/connection.js");
+var connection = require("./connection.js");
 
 // function for when vals are placed into the SQL syntax
 function printQuestionMarks(num) {
