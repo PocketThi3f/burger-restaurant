@@ -3,7 +3,6 @@ and the export made by the ORM */
 var mysql = require("mysql");
 
 var connection = mysql.createConnection({
-	port: 1337,
 	host: "localhost",
 	user: "root",
 	password: "password",
@@ -12,7 +11,7 @@ var connection = mysql.createConnection({
 
 connection.connect(function(err) {
 	if (err) {
-		console.error("Sorry, error " + err.stack);
+		console.error("Sorry: " + err.stack);
 		return;
 	}
 	console.log("Connected as ID: " + connection.threadId);
