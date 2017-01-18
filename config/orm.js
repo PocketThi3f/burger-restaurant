@@ -28,7 +28,7 @@ function objToSql(ob) {
 var orm = {
 	// use the select method to display all burger contents
 	selectAll: function(tableInput, cb) {
-		var queryString = "SELECT * FROM " + tableInput + ';';
+		var queryString = "SELECT * FROM " + tableInput + ";";
 		connection.query(queryString, tableInput, function(err, result) {
 			if (err) {
 				throw err;
