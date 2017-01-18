@@ -10,7 +10,7 @@ var app = express();
 var PORT = process.env.PORT || 1337;
 
 // Static content for the app 
-app.use(express.static(process.cwd() + "/public"));
+app.use(express.static(__dirname + "/public"));
 
 app.use(bodyParser.urlencoded({
 	extended: false
