@@ -7,7 +7,7 @@ var exphbs = require("express-handlebars");
 var routes = require("./controllers/burgers_controller.js");
 
 var app = express();
-var PORT = process.env.PORT || 1337;
+var port = process.env.port || 3306;
 
 // Static content for the app 
 app.use(express.static(process.cwd() + "/public"));
@@ -28,6 +28,6 @@ app.set("view engine", "handlebars");
 app.use("/", routes);
 
 
-app.listen(PORT, function() {
-  console.log("I am now listening to port: " + PORT);
+app.listen(port, function() {
+  console.log("I am now listening to port: " + port);
 });
