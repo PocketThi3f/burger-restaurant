@@ -14,7 +14,7 @@
 
 						<form action="/{{ID}}?_method=PUT" method="POST">
 							<input type="hidden" name="devoured" value="true">
-							<button type="submit" class="btn-success">Diggin In!</button>
+							<button type="submit" class="btn-success"><i class="fa fa-money" aria-hidden="true"></i> Diggin In!</button>
 						</form>
 
 					{{> burgers/delete-burgers}}	
@@ -35,7 +35,7 @@
 
 						<form action="/{{ID}}?_method=PUT" method="POST">
 							<input type="hidden" name="devoured" value="false">
-							<button type="submit" class="btn-primary">Re-Order</button>
+							<button type="submit" class="btn-primary"><i class="fa fa-refresh" aria-hidden="true"></i> Re-Order</button>
 						</form>
 
 					{{> burgers/delete-burgers}}	
@@ -52,10 +52,10 @@
 			
 
 			<div class="form-group">
-				<label for="menu" class="mealT">Let Me Know What To Cook For Yah Then Hit Submit!</label>
+				<label for="menu" class="mealT">Cook A New Burger</label>
 				<input type="text" id="menu" name="burger_name">
 			</div>
 
-			<button type="submit" class="btn-danger mealT">Ready To Order</button>
+			<button type="submit" class="btn-danger mealT"><i class="fa fa-bell" aria-hidden="true"></i> Ready To Order</button>
 		</form>
 </div>	
