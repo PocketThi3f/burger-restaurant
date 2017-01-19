@@ -13,7 +13,7 @@ if(process.env.JAWSDB_ROSE_URL) {
     password: "password",
     database: "burgers_db"
   });
-  console.log("the issue");
+  //console.log("the issue");
 }
 
 module.exports = connection;

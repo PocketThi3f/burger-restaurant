@@ -15,7 +15,9 @@
 						<form action="/{{ID}}?_method=PUT" method="POST">
 							<input type="hidden" name="devoured" value="true">
 							<button type="submit" class="btn-success">Diggin In!</button>
-						</form>			
+						</form>
+
+					{{> burgers/delete-burgers}}	
 					</li>
 				{{/unless}}	
 			{{/each}}
@@ -35,6 +37,8 @@
 							<input type="hidden" name="devoured" value="false">
 							<button type="submit" class="btn-primary">Re-Order</button>
 						</form>
+
+					{{> burgers/delete-burgers}}	
 					</li>
 				{{/if}}
 			{{/each}}	

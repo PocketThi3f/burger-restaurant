@@ -26,13 +26,21 @@ router.post("/", function(req, res) {
 });
 
 router.put("/:ID", function(req, res) {
-	var condition = "ID = "+ req.params.ID;
+	var condition = "ID = " + req.params.ID;
 
 	console.log("condition", condition);
 
 	burger.updateOne({ 
 		devoured: req.body.devoured 
 	}, condition, function() {
+		res.redirect("/");
+	});
+});
+
+router.delete("/:ID", function(req, res) {
+	var condition = "ID = " + req.body.ID;
+
+	burger.deleteOne(condition, function() {
 		res.redirect("/");
 	});
 });
