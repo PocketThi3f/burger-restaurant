@@ -2,13 +2,12 @@
 and the export made by the ORM */
 var mysql = require("mysql");
 var connection;
-console.log(process.env.JAWSDB_ROSE_URL);
 
 if(process.env.JAWSDB_ROSE_URL) {
-  connection = mysql.createConnection(process.env.JAWSDB_ROSE_URL);
+  connection = mysql.createPool(process.env.JAWSDB_ROSE_URL);
   console.log("I am Jaws");
 } else {
-  connection = mysql.createConnection({
+  connection = mysql.createPool({
     host: "localhost",
     user: "root",
     password: "password",
@@ -16,13 +15,5 @@ if(process.env.JAWSDB_ROSE_URL) {
   });
   console.log("the issue");
 }
-
-connection.connect(function(err) {
-	if (err) {
-		console.error("Sorry: " + err.stack);
-		return;
-	}
-	console.log("Connected as ID: " + connection.threadId);
-});
 
 module.exports = connection;
