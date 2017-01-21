@@ -10,7 +10,7 @@ if(process.env.JAWSDB_ROSE_URL) {
   connection = mysql.createPool({
     host: "localhost",
     user: "root",
-    password: "password",
+    password: "",
     database: "burgers_db"
   });
   //console.log("the issue");
